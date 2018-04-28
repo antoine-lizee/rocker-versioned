@@ -1,4 +1,6 @@
-FROM rocker/rstudio:3.3.3
+# Get the image built from the same doker file but with a different rstudio version for convenience, with:
+# `docker build -t antoinelizee/rstudio:3.3.3 --build-arg RSTUDIO_VERSION=1.1.447 rstudio/3.3.3`
+FROM antoinelizee/rstudio:3.3.3
 
 RUN apt-get update -qq && apt-get -y --no-install-recommends install \
   libxml2-dev \
